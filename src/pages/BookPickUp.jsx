@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const BookPickup = () => {
+const BookPickUp = () => {
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -85,4 +85,4 @@ const BookPickup = () => {
   );
 };
 
-export default BookPickup;
+export default BookPickUp;

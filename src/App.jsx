@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
-import BookPickup from "./pages/BookPickup";
+import BookPickUp from "./pages/BookPickUp";
 import VisitUs from "./pages/VisitUs";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import Awareness from "./pages/Awareness";
@@ -24,7 +24,7 @@ const App = () => {
             <Route path="/services" element={<Services />} />
             <Route path="/book-pickup" element={
               <ErrorBoundary>
-                <BookPickup />
+                <BookPickUp />
               </ErrorBoundary>
             } />
             <Route path="/visit-us" element={<VisitUs />} />
