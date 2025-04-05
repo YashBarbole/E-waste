@@ -52,6 +52,7 @@ const VisitUs = () => {
           <input
             type="date"
             name="visit_date"
+            placeholder=" Enter Visit date "
             required
             className="w-full border border-gray-300 rounded px-4 py-2"
           />
@@ -87,7 +88,7 @@ const VisitUs = () => {
           <br />
           <strong>Working Hours:</strong> Mon–Sat, 9:00 AM – 6:00 PM
           <br />
-          <strong>Manager Contact:</strong> +91-9876543210
+         
         </div>
       </div>
     </section>
