@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom"; // ⬅️ Add this
+
 const Home = () => {
   return (
     <section className="bg-gradient-to-br from-green-100 to-green-200 min-h-screen flex items-center justify-center px-6 py-16">
@@ -12,14 +14,12 @@ const Home = () => {
           Join us in our mission to reduce e-waste and build a cleaner, greener tomorrow.
         </p>
 
-      
-
-        <a
-          href="/book-pickup"
+        <Link
+          to="/book-pickup"
           className="inline-block bg-green-700 hover:bg-green-800 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg transition duration-300"
         >
           🚛 Book a Free Pickup
-        </a>
+        </Link>
       </div>
     </section>
   );
