@@ -1,5 +1,4 @@
 import React from "react";
-
 const Home = () => {
   return (
     <section className="bg-gradient-to-br from-green-100 to-green-200 min-h-screen flex items-center justify-center px-6 py-16">
