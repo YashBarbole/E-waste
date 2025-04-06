@@ -26,8 +26,10 @@ const Services = () => {
   return (
     <section className="bg-white min-h-screen py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-extrabold text-green-800 mb-4">Our Services</h2>
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+        <h2 className="text-4xl font-extrabold text-green-800 mb-4 animate-fade-in">
+          Our Services
+        </h2>
+        <p className="text-gray-600 mb-12 max-w-2xl mx-auto animate-fade-in-slow">
           We provide environmentally responsible solutions for your electronic waste.
         </p>
 
@@ -35,9 +37,9 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-green-50 p-8 rounded-2xl shadow-md hover:shadow-lg transition duration-300"
+              className="bg-green-50 p-8 rounded-2xl shadow-md transform hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out animate-slide-up"
             >
-              {service.icon}
+              <div className="flex justify-center">{service.icon}</div>
               <h3 className="text-xl font-semibold text-green-900 mb-2">
                 {service.title}
               </h3>
