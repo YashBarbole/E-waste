@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-import { FaLeaf } from "react-icons/fa";
+import logo from "../assets/logos.png"; // ✅ Ensure the logo path is correct
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,26 +19,29 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-green-800 text-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
+    <nav className="bg-white text-green-900 shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex justify-between items-center h-24">
+        {/* ✅ Logo Only (Full Height) */}
         <Link
           to="/"
-          className="flex items-center gap-2 text-2xl font-bold tracking-wide"
+          className="flex items-center h-full"
           onClick={closeMenu}
         >
-          <FaLeaf className="text-3xl text-green-200 animate-spin-slow" />
-          <span>GreenTech</span>
+          <img
+            src={logo}
+            alt="Logo"
+            className="h-full w-auto object-contain"
+          />
         </Link>
 
-        {/* Mobile Menu Button */}
+        {/* 🍔 Mobile Menu Button */}
         <button className="md:hidden text-2xl focus:outline-none" onClick={toggleMenu}>
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
 
-        {/* Navigation Links */}
+        {/* 🌐 Navigation Links */}
         <div
-          className={`absolute md:static top-full left-0 w-full md:w-auto bg-green-800 md:bg-transparent px-6 md:px-0 py-4 md:py-0 md:flex md:items-center transition-all duration-300 ease-in-out ${
+          className={`absolute md:static top-full left-0 w-full md:w-auto bg-white md:bg-transparent px-6 md:px-0 py-4 md:py-0 md:flex md:items-center transition-all duration-300 ease-in-out ${
             isOpen ? "block" : "hidden"
           }`}
         >
@@ -47,8 +50,8 @@ const Navbar = () => {
               key={path}
               to={path}
               onClick={closeMenu}
-              className={`block md:inline-block text-lg px-4 py-2 rounded-md hover:bg-green-700 hover:text-green-100 transition ${
-                location.pathname === path ? "bg-green-700" : ""
+              className={`block md:inline-block text-lg px-4 py-2 rounded-md hover:bg-green-100 hover:text-green-800 transition ${
+                location.pathname === path ? "bg-green-100 font-semibold" : ""
               }`}
             >
               {name}
