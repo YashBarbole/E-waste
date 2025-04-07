@@ -9,6 +9,7 @@ import VisitUs from "./pages/VisitUs";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import Awareness from "./pages/Awareness";
 import Volunteer from "./pages/Volunteer";
+import MapPage from "./pages/MapPage";
 
 
 const App = () => {
@@ -28,6 +29,9 @@ const App = () => {
               </ErrorBoundary>
             } />
             <Route path="/visit-us" element={<VisitUs />} />
+            <Route path="/map" element={<MapPage />} />
+
+
           </Routes>
         </div>
         <Footer />
